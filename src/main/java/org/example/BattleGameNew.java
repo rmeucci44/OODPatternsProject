@@ -9,7 +9,7 @@ public class BattleGameNew {
         Random random = new Random();
 
         Player player = (Player) CharacterFactory.createCharacter("Player", "Hero");
-        Enemy enemy = (Enemy) CharacterFactory.createCharacter("Enemy", "Goblin");
+        GoblinEnemyAdapter enemy = (GoblinEnemyAdapter) CharacterFactory.createCharacter("Enemy", "Goblin");
 
         System.out.println("Welcome, traveler. You have wandered into the cursed lands of Eldoria.");
         System.out.println("Dark forces roam these lands, and you must fight to survive.");
@@ -34,6 +34,7 @@ public class BattleGameNew {
 
             if (!enemy.isAlive()){
                 System.out.println("With a final strike, you vanquish the " + enemy.getName());
+                System.out.println("The path ahead is uncertain, but you have survived... for now.");
                 break;
             }
 

@@ -24,8 +24,6 @@ public class Player extends Character {
                 defending = false;
             }
             super.takeDamage(damage);
-
-
         }
     }
 

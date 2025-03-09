@@ -30,4 +30,8 @@ public abstract class Character {
         target.takeDamage(damage);
         System.out.println(name + " attacks for " + damage + " damage.");
     }
+
+    public int getHealth() {
+        return health;
+    }
 }
