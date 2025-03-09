@@ -21,25 +21,16 @@ public class BattleGameNew {
             System.out.println("Choose an action: (1) Attack (2) Defend (3) Heal");
             int choice = scanner.nextInt();
 
-            Command command = null;
+            Command command = CommandFactory.createCommand(choice, player, enemy, random);
 
-            switch (choice){
-                case 1:
-                    command = new Attack(player, enemy);
-                    break;
-                case 2:
-                    command = new Defend(player);
-                    break;
-                case 3:
-                    int heal = random.nextInt(3) + 1;
-                    command = new Heal(player, heal);
-                    break;
-                default:
-                    System.out.println("Invalid choice please pick again.");
-                    continue;
+            if (command != null){
+                command.execute();
+            } else {
+                System.out.println("Invalid choice. Try again.");
+                continue;
             }
 
-            command.execute();
+
 
             if (!enemy.isAlive()){
                 System.out.println("With a final strike, you vanquish the " + enemy.getName());

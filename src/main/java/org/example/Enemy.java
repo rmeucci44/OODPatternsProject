@@ -17,7 +17,8 @@ public class Enemy extends Character {
     @Override
     public void attack (Character target) {
         int damage = isAggressive ? (new Random().nextInt(3) + 3) : (new Random().nextInt(3) + 1);
-        target.takeDamage(damage);
         System.out.println(name + " Strategy: " + getStrategy() + " attacks for " + damage);
+        target.takeDamage(damage);
+
     }
 }
