@@ -27,8 +27,8 @@ public abstract class Character {
 
     public void attack (Character target){
         int damage = random.nextInt(5) + 1;
-        target.takeDamage(damage);
         System.out.println(name + " attacks for " + damage + " damage.");
+        target.takeDamage(damage);
     }
 
     public int getHealth() {
