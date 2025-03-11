@@ -1,12 +1,7 @@
 package org.example;
 
-
-
-public class Enemy extends Character{
-
-    public Enemy(String name){
-        super(name, 20);
-    }
-
-
+public interface Enemy {
+    String getName();
+    void receiveDamage(int damage);
+    boolean checkIfAlive();
 }
