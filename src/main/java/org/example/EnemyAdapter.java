@@ -1,35 +1,28 @@
 package org.example;
 
-import java.util.Random;
-
-public class GoblinEnemyAdapter extends Character {
+public class EnemyAdapter extends Character {
     private final Enemy enemy;
-    private final boolean isAggressive;
 
-    public GoblinEnemyAdapter(Enemy enemy) {
-        super(enemy.getName(), 20);  // Default health for compatibility
+    public EnemyAdapter(Enemy enemy) {
+        super(enemy.getName(), 20);  // Default health; you can make this configurable
         this.enemy = enemy;
-        this.isAggressive = new Random().nextBoolean();
     }
 
     @Override
     public void attack(Character target) {
-        int damage = isAggressive ? (random.nextInt(3) + 3) : (random.nextInt(3) + 1);
-        System.out.println(enemy.getName() + " Strategy: " + getStrategy() + " attacks for " + damage);
-        target.takeDamage(damage);
+        if (enemy instanceof Goblin) {
+            ((Goblin) enemy).attack(target);
+        }
+        //Can add other enemies here later such as Orc
     }
 
     @Override
     public void takeDamage(int damage) {
-        enemy.receiveDamage(damage); // Delegate to the real enemy implementation.
+        enemy.receiveDamage(damage);
     }
 
     @Override
     public boolean isAlive() {
         return enemy.checkIfAlive();
-    }
-
-    public String getStrategy() {
-        return isAggressive ? "Aggressive" : "Patient";
     }
 }

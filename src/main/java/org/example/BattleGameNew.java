@@ -9,7 +9,7 @@ public class BattleGameNew {
         Random random = new Random();
 
         Player player = (Player) CharacterFactory.createCharacter("Player", "Hero");
-        GoblinEnemyAdapter enemy = (GoblinEnemyAdapter) CharacterFactory.createCharacter("Enemy", "Goblin");
+        EnemyAdapter enemy = (EnemyAdapter) CharacterFactory.createCharacter("Enemy", "Goblin");
 
         System.out.println("Welcome, traveler. You have wandered into the cursed lands of Eldoria.");
         System.out.println("Dark forces roam these lands, and you must fight to survive.");

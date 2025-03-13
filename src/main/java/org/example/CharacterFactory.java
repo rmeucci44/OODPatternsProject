@@ -8,7 +8,7 @@ public class CharacterFactory {
         }
         else if (type.equalsIgnoreCase("Enemy")) {
             Enemy goblin = new Goblin(name);
-            return new GoblinEnemyAdapter(goblin);
+            return new EnemyAdapter(goblin);
         }
         throw new IllegalArgumentException("Unknown character type: " + type);
     }
