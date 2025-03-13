@@ -20,6 +20,11 @@ public class Goblin implements Enemy {
     }
 
     @Override
+    public int getHealth(){
+        return health;
+    }
+
+    @Override
     public void receiveDamage(int damage) {
         health -= damage;
         System.out.println(name + " takes " + damage + " damage. Remaining health: " + health);

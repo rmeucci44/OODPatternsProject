@@ -4,7 +4,7 @@ public class EnemyAdapter extends Character {
     private final Enemy enemy;
 
     public EnemyAdapter(Enemy enemy) {
-        super(enemy.getName(), 20);  // Default health; you can make this configurable
+        super(enemy.getName(), enemy.getHealth());
         this.enemy = enemy;
     }
 
