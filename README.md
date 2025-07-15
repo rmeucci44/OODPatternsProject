@@ -4,7 +4,7 @@ How to Run (Using IntelliJ)
 
     Clone or download the project:
 
-        GitHub link: https://github.itap.purdue.edu/rmeucci/Project2OODPatterns.git
+        GitHub link: https://github.itap.purdue.edu/rmeucci44/OODPatternsProject.git
 
         Or download the ZIP and extract it.
 
