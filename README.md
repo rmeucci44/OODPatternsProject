@@ -1,4 +1,4 @@
-﻿# Project2OODPatterns
+﻿# OODPatternsProject
 
 How to Run (Using IntelliJ)
 
@@ -7,18 +7,21 @@ How to Run (Using IntelliJ)
         GitHub link: https://github.itap.purdue.edu/rmeucci44/OODPatternsProject.git
 
         Or download the ZIP and extract it.
+        
 
     Open IntelliJ IDEA:
 
         Click File → Open.
 
         Navigate to the folder containing the project files and open it.
+        
 
     Set up the project:
 
         If prompted, mark the folder as a Java project.
 
         Make sure a JDK is selected (Java 17 or 21 is recommended).
+        
 
     Run the program:
 
